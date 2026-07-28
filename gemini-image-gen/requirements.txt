@@ -1,0 +1,2 @@
+requests>=2.28
+Pillow>=9.0  # optional: only used to print output dimensions on the CLI

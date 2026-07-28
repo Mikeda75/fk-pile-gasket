@@ -1,0 +1,17 @@
+# Secrets — never commit API keys
+secrets/
+gemini_api_key.txt
+*.key
+
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Temp/render artifacts
+spec-render.pdf
+spec-test.pdf
+docs/FK-Pile-Gasket-Product-Data-Sheet.pdf
+
+# Internal reference material - not for public repo
+References/

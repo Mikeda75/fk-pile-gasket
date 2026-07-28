@@ -1,0 +1,6 @@
+# Never commit the API key
+gemini_api_key.txt
+secrets/
+
+__pycache__/
+*.pyc

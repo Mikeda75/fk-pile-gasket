@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FK Supply Co — Pile Gasket: Analysis &amp; Draft Spec Sheet</title>
+<style>
+  :root{
+    --navy:#12314e; --blue:#1d5c8f; --accent:#e8b418; --bg:#f5f7fa;
+    --ink:#1d2733; --muted:#5b6b7c; --card:#ffffff; --line:#dde5ec;
+    --warn-bg:#fff7e0; --warn-border:#e0b83a; --ok:#1c7c4c;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55;}
+  .wrap{max-width:900px; margin:0 auto; padding:24px 20px 80px;}
+
+  header.hero{background:linear-gradient(135deg,var(--navy),var(--blue)); color:#fff; border-radius:12px; padding:36px 32px; margin-bottom:28px;}
+  header.hero h1{font-size:1.7rem; letter-spacing:.02em;}
+  header.hero .sub{color:#cfe0ef; margin-top:8px; font-size:.98rem;}
+  header.hero .badge{display:inline-block; background:var(--accent); color:#3a2c00; font-weight:700; font-size:.75rem; letter-spacing:.08em; padding:4px 10px; border-radius:999px; margin-bottom:14px; text-transform:uppercase;}
+
+  nav.toc{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 18px; margin-bottom:28px; font-size:.92rem;}
+  nav.toc a{color:var(--blue); text-decoration:none; margin-right:16px; white-space:nowrap;}
+  nav.toc a:hover{text-decoration:underline;}
+
+  section{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:26px 28px; margin-bottom:24px;}
+  h2{color:var(--navy); font-size:1.25rem; margin-bottom:14px; padding-bottom:8px; border-bottom:2px solid var(--accent);}
+  h3{color:var(--blue); font-size:1.02rem; margin:18px 0 8px;}
+  p{margin-bottom:10px;}
+  ul,ol{margin:0 0 12px 22px;}
+  li{margin-bottom:6px;}
+  strong{color:var(--navy);}
+
+  table{width:100%; border-collapse:collapse; margin:12px 0 16px; font-size:.93rem;}
+  th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px;}
+  td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+  tr:nth-child(even) td{background:#f7fafc;}
+
+  .confirm{display:inline-block; background:var(--warn-bg); border:1px solid var(--warn-border); color:#7a5c00; font-size:.75rem; font-weight:700; padding:1px 7px; border-radius:4px; letter-spacing:.03em;}
+  .alert{background:var(--warn-bg); border-left:4px solid var(--warn-border); padding:12px 16px; border-radius:6px; margin:12px 0;}
+  .good{color:var(--ok); font-weight:600;}
+  .price{font-size:1.5rem; font-weight:800; color:var(--navy);}
+  .muted{color:var(--muted); font-size:.9rem;}
+
+  .cols{display:flex; gap:20px; flex-wrap:wrap;}
+  .cols>div{flex:1 1 260px;}
+  .stat{background:#f0f5fa; border:1px solid var(--line); border-radius:10px; padding:14px 16px; text-align:center;}
+  .stat .n{font-size:1.35rem; font-weight:800; color:var(--navy);}
+  .stat .l{font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:.05em;}
+
+  .qa li{margin-bottom:9px;}
+  footer{color:var(--muted); font-size:.85rem; text-align:center; margin-top:30px;}
+  @media print{ body{background:#fff;} section{border:none; page-break-inside:avoid;} nav.toc{display:none;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <span class="badge">Internal Review Draft — 2026-07-27</span>
+  <h1>FK Supply Co LLC — Pile Gasket</h1>
+  <div class="sub">Analysis of current online presence + draft product spec sheet, compiled from fksupplyco.com, Kevin's manufacturer email, the product flyer, and product photos. For the new single-product B2B site targeting NYC-area general contractors and piling builders.</div>
+</header>
+
+<nav class="toc">
+  <a href="#business">The Business</a>
+  <a href="#product">The Product</a>
+  <a href="#site">Current Website</a>
+  <a href="#spec">Draft Spec Sheet</a>
+  <a href="#questions">Questions for Kevin</a>
+  <a href="#reco">New-Site Recommendation</a>
+</nav>
+
+<section id="business">
+  <h2>1. The Business</h2>
+  <div class="cols" style="margin-bottom:14px;">
+    <div class="stat"><div class="n">$6.04</div><div class="l">per sq ft, list price</div></div>
+    <div class="stat"><div class="n">200 units</div><div class="l">order already in discussion</div></div>
+    <div class="stat"><div class="n">2–4 wks</div><div class="l">current lead time</div></div>
+  </div>
+  <table>
+    <tr><th style="width:32%">Item</th><th>Detail</th></tr>
+    <tr><td>Company</td><td>FK Supply Company LLC — co-owned by Kevin Kelly, a working commercial diver</td></tr>
+    <tr><td>Location</td><td>265 Long Branch Ave, Bayville, NJ 08721</td></tr>
+    <tr><td>Email</td><td>FKSUPPLYCOLLC@GMAIL.COM</td></tr>
+    <tr><td>Phone</td><td><strong>(732) 895-2200</strong> <span class="good">✓ confirmed</span> <span class="muted">(the flyer's 896-2200 is a typo — fix on next reprint)</span></td></tr>
+    <tr><td>Hours</td><td>Mon–Fri 9:00am–5:00pm</td></tr>
+    <tr><td>Social</td><td>Instagram @fksupplyco</td></tr>
+    <tr><td>Story</td><td>Product born from Kevin's commercial-diving field experience — "Designed by Divers." Apparel line tagline: "Bonded by Water."</td></tr>
+  </table>
+</section>
+
+<section id="product">
+  <h2>2. The Product</h2>
+  <div class="alert"><strong class="good">✓ Canonical name confirmed: "Pile Gasket."</strong> The old materials also use Piling Jacket, Pile Jacket, Bottom Bag, Pile Jacket Seal, and piling sealing sleeve — keep those as "also known as" text for search, but every headline, spec sheet, and quote uses <strong>Pile Gasket</strong>.</div>
+
+  <h3>What it does</h3>
+  <p>A zip-on, drawstring-cinched sleeve that seals the bottom of a marine piling during concrete or epoxy repair, preventing fill material from spilling into the waterway. It's an environmental-containment product that also saves material and diver bottom time.</p>
+
+  <h3>Value claims (from flyer &amp; site)</h3>
+  <ul>
+    <li>Reduces installation time and diver bottom time</li>
+    <li>Reduces wasted fill material</li>
+    <li>Better price than alternatives</li>
+    <li>Designed by a working commercial diver who installs pile jackets for a living</li>
+  </ul>
+
+  <h3>Known construction details</h3>
+  <ul>
+    <li><strong>Fabric:</strong> Ottertex® waterproof canvas with PVC back lining (600×600-denier 100% polyester, ~0.55&nbsp;mm thick, PVC-coated, waterproof, UV/mold/abrasion-resistant)</li>
+    <li><strong>Closure:</strong> Lenzip® #10 locking zipper with zipper stops, running vertically the full length</li>
+    <li><strong>Cinching:</strong> Two drawstrings — one in the top hem, one in the bottom hem</li>
+    <li><strong>Stitching:</strong> High-tensile-strength thread</li>
+  </ul>
+
+  <h3>Pricing &amp; ordering</h3>
+  <p><span class="price">$6.04 / sq ft</span> &nbsp;<span class="muted">custom-sized; quote requested on all orders; 2–4 week lead time; ship or pickup in Bayville, NJ</span></p>
+  <p>Sizing = pile circumference (or perimeter) × height — example on the site: 51" L × 36" H. Square footage is rounded up to the next half foot.</p>
+  <p class="good">Traction: one customer already discussing a 200-unit order, and several companies reportedly ready to buy.</p>
+</section>
+
+<section id="site">
+  <h2>3. Current Website (fksupplyco.com)</h2>
+  <p><strong>Platform:</strong> Square Online, free-tier template look. Pages: Home, About, Gallery, Shop All (8 products).</p>
+  <h3>Problems for a B2B buyer</h3>
+  <ul>
+    <li><strong>Product mix:</strong> The Pile Gasket sits alongside diver-lifestyle merch — sweatshirt $52, sweatpants $36.50, long sleeve $37.50, beanie $25, changing mat $35, sticker $5, throw-flasher $8. A GC's estimator landing here would not read this as a serious construction-supply vendor.</li>
+    <li><strong>About page is generic template copy</strong> ("Superior service, personalized attention") — no mention of the pile gasket, Kevin's diving credentials, or NYC-area work.</li>
+    <li><strong>No technical collateral at all:</strong> no spec sheet, no dimensioned drawing, no installation instructions, no materials data, no photos of the product installed on a pile.</li>
+    <li><strong>Mixed purchase signals:</strong> retail-style checkout by the square foot, but the description says "please request a quote for all orders." For B2B, the site should lead with <strong>Request a Quote</strong>.</li>
+  </ul>
+</section>
+
+<section id="spec">
+  <h2>4. Draft Spec Sheet — Pile Gasket <span class="muted" style="font-weight:400;">(v0.4)</span></h2>
+  <div class="alert">Remaining <span class="confirm">CONFIRM</span> tags need Kevin's sign-off before distribution. Thread and seam specs are industry-standard assumptions consistent with his materials (Ottertex + Lenzip #10 + "high tensile thread") — he should verify them against actual production.</div>
+
+  <h3>Product</h3>
+  <p><strong>Pile Gasket</strong> — a zip-on, drawstring-cinched sealing sleeve that closes off the bottom of a marine piling during concrete or epoxy repair, preventing spill of fill material into the waterway and reducing wasted material and diver bottom time.</p>
+  <p class="muted">Also known as: piling jacket seal, bottom bag, pile jacket gasket, piling sealing sleeve.</p>
+
+  <h3>Application</h3>
+  <ul>
+    <li>Seals the base of pile-encapsulation forms during underwater concrete/epoxy placement</li>
+    <li>Diver-installed: drawstrings cinch the sleeve to the pile; the vertical zipper closes it around the pile without threading over the top</li>
+    <li>Pile types: timber, steel, concrete <span class="confirm">CONFIRM — which has it actually been used on?</span></li>
+    <li>Fill compatibility: works with whatever concrete the job specifies — no special mix requirements</li>
+    <li><strong>Removed after the fill cures</strong> — not a permanent or sacrificial form</li>
+  </ul>
+
+  <h3>Materials &amp; construction</h3>
+  <table>
+    <tr><th style="width:26%">Component</th><th>Specification</th></tr>
+    <tr><td>Shell fabric</td><td>Ottertex® waterproof canvas — 600×600 denier, 100% polyester, PVC-coated backing, ~0.55&nbsp;mm thickness <span class="confirm">CONFIRM exact Ottertex line/weight</span></td></tr>
+    <tr><td>Fabric properties</td><td>Waterproof; UV-resistant; mold/mildew-resistant; abrasion- and tear-resistant; high tensile strength</td></tr>
+    <tr><td>Closure</td><td>Lenzip® #10 locking zipper with zipper stops, full vertical length</td></tr>
+    <tr><td>Cinching</td><td>Dual drawstrings, top and bottom hems <span class="confirm">CONFIRM cord material &amp; diameter</span></td></tr>
+    <tr><td>Stitching</td><td>High-tensile bonded polyester thread (#92 / Tex 90 class), UV- and saltwater-resistant <span class="muted">(assumed — verify vs. production)</span></td></tr>
+    <tr><td>Seams</td><td>Double-stitched, reinforced at zipper ends and drawstring exits <span class="muted">(assumed — verify vs. production)</span></td></tr>
+    <tr><td>Color</td><td>White standard <span class="confirm">CONFIRM other colors</span></td></tr>
+  </table>
+
+  <h3>Sizing &amp; ordering</h3>
+  <ul>
+    <li><strong>Made to order</strong> for piles <strong>up to 24" diameter</strong> (or equivalent perimeter for square/H-pile) — no stocked sizes</li>
+    <li>Size = circumference (round) or perimeter × required height — e.g., 51" × 36"</li>
+    <li>Square footage rounded up to the nearest half foot</li>
+    <li>Measuring allowance over pile circumference: <span class="confirm">CONFIRM slack amount</span></li>
+  </ul>
+
+  <h3>Pricing &amp; lead time</h3>
+  <ul>
+    <li><strong>$6.04 per sq ft</strong> list — quote required on all orders</li>
+    <li>Volume pricing available on larger orders — discussed at quote time (no set tiers)</li>
+    <li>Lead time 2–4 weeks from order confirmation; ship or pickup (Bayville, NJ)</li>
+  </ul>
+
+  <h3>Why FK</h3>
+  <ul>
+    <li>Designed by a working commercial diver who installs pile jackets for a living</li>
+    <li>Cuts installation and diver bottom time</li>
+    <li>Reduces wasted fill material and waterway contamination</li>
+    <li>Made in NJ; serving the NYC-metro marine construction market</li>
+  </ul>
+
+  <h3>Contact</h3>
+  <p>FK Supply Company LLC · 265 Long Branch Ave, Bayville, NJ 08721<br>
+  Phone: (732) 895-2200 · FKSUPPLYCOLLC@GMAIL.COM · fksupplyco.com</p>
+</section>
+
+<section id="questions">
+  <h2>5. Questions for Kevin</h2>
+  <p class="muted">He's non-technical — this is probably a phone call, not an email.</p>
+  <ol class="qa">
+    <li><span class="good">✓ Resolved:</span> phone is (732) 895-2200</li>
+    <li><span class="good">✓ Resolved:</span> official name is Pile Gasket</li>
+    <li><span class="good">✓ Resolved:</span> made to order only, up to 24" piles — no stocked sizes</li>
+    <li><span class="good">✓ Resolved:</span> use industry-standard assumptions (bonded polyester #92, double-stitched); Kevin verifies against production</li>
+    <li><span class="good">✓ Resolved:</span> no referenceable jobs yet — the site must not imply field history; lean on the "designed by a working commercial diver" story</li>
+    <li><span class="good">✓ Resolved:</span> volume pricing mentioned vaguely ("available on larger orders, discussed at quote time") — no set tiers</li>
+    <li><span class="good">✓ Resolved:</span> comes off after the fill cures — not a sacrificial form</li>
+    <li><span class="good">✓ Resolved:</span> fill is whatever concrete the job specifies — no special mix requirements</li>
+    <li><span class="good">✓ Resolved:</span> no environmental certifications or compliance claims — only the factual functional description (keeps fill out of the waterway)</li>
+    <li><span class="good">✓ Resolved:</span> no COI/W-9/NET-30 offered currently — leave off the site, handle if a GC asks</li>
+  </ol>
+</section>
+
+<section id="reco">
+  <h2>6. Recommendation for the New Site</h2>
+  <p>A focused, single-product B2B landing site — no merch:</p>
+  <ul>
+    <li><strong>Hero:</strong> photo of the Pile Gasket installed on a real pile + one-line value prop ("Seal the pile. Save the pour. Protect the waterway." — or similar)</li>
+    <li><strong>Spec sheet:</strong> on-page and as a downloadable PDF (the doc above, once CONFIRM items are resolved)</li>
+    <li><strong>How to measure &amp; order:</strong> simple diagram — circumference × height, rounding rule</li>
+    <li><strong>Request a Quote form</strong> as the primary call to action (not a cart)</li>
+    <li><strong>The story:</strong> "designed by working commercial divers" — Kevin's credibility is the differentiator</li>
+    <li>Keep the diver merch on the existing Square store or retire it from this domain entirely</li>
+  </ul>
+</section>
+
+<footer>Compiled 2026-07-27 · Sources: fksupplyco.com (Square Online), Kevin's manufacturer email, FK Supply flyer, product photos, Ottertex published fabric specs.</footer>
+</div>
+</body>
+</html>

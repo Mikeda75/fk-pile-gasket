@@ -26,9 +26,19 @@
   nav ul{display:flex; gap:26px; list-style:none; align-items:center;}
   nav ul a{color:#d7e3ee; text-decoration:none; font-size:.92rem; font-weight:600;}
   nav ul a:hover{color:#fff;}
-  nav .cta{background:var(--accent); color:#3a2c00 !important; padding:9px 18px; border-radius:6px; font-weight:800;}
+  nav .cta{background:var(--accent); color:#3a2c00 !important; padding:9px 18px; border-radius:6px; font-weight:800; white-space:nowrap;}
   nav .cta:hover{background:#f2c33a;}
-  nav .phone{color:var(--accent); font-weight:700; text-decoration:none;}
+  nav .phone{color:var(--accent); font-weight:700; text-decoration:none; white-space:nowrap;}
+  @media(max-width:960px){
+    nav ul li.hide-m{display:none;}
+    nav ul{gap:14px;}
+  }
+  @media(max-width:430px){
+    nav .logo b{display:none;}
+    nav ul{gap:10px;}
+    nav .cta{padding:11px 14px; font-size:.85rem;}
+    nav .phone{font-size:.85rem; padding:12px 0;}
+  }
 
   /* ---------- hero ---------- */
   header.hero{position:relative; color:#fff; min-height:560px; display:flex; align-items:center;
@@ -137,12 +147,12 @@
 
 <nav>
   <div class="wrap">
-    <a class="logo" href="#"><img src="images/fk-logo.jpg" alt="FK Supply Co. octopus logo">FK SUPPLY <span>CO.</span></a>
+    <a class="logo" href="#"><img src="images/fk-logo.jpg" alt="FK Supply Co. octopus logo"><b>FK SUPPLY <span>CO.</span></b></a>
     <ul>
-      <li><a href="#product">Product</a></li>
-      <li><a href="#specs">Specs</a></li>
-      <li><a href="#measure">How to Order</a></li>
-      <li><a href="#story">About</a></li>
+      <li class="hide-m"><a href="#product">Product</a></li>
+      <li class="hide-m"><a href="#specs">Specs</a></li>
+      <li class="hide-m"><a href="#measure">How to Order</a></li>
+      <li class="hide-m"><a href="#story">About</a></li>
       <li><a class="phone" href="tel:7328952200">(732) 895-2200</a></li>
       <li><a class="cta" href="#quote">Request a Quote</a></li>
     </ul>

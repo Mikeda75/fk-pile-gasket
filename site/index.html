@@ -32,7 +32,9 @@
 
   /* ---------- hero ---------- */
   header.hero{position:relative; color:#fff; min-height:560px; display:flex; align-items:center;
-    background:linear-gradient(rgba(10,28,46,.55), rgba(10,28,46,.72)), url("images/hero-installed.png") center 35%/cover no-repeat;}
+    background:linear-gradient(rgba(10,28,46,.55), rgba(10,28,46,.72)), url("images/hero-installed.png") center 42%/cover no-repeat;}
+  @media(min-width:1100px){ header.hero{min-height:84vh;} }
+  @media(min-aspect-ratio:2/1){ header.hero{min-height:92vh;} }
   .hero .inner{max-width:1100px; margin:0 auto; padding:80px 24px; width:100%; position:relative;}
   .hero-badge{position:absolute; right:24px; top:50%; transform:translateY(-50%); width:190px; height:190px; border-radius:50%; border:3px solid var(--fkblue); box-shadow:0 12px 34px rgba(0,0,0,.45); object-fit:cover; background:#fff;}
   @media(max-width:900px){ .hero-badge{display:none;} }

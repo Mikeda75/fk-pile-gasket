@@ -285,19 +285,43 @@
     <div class="kick" style="color:var(--accent);">Request a Quote</div>
     <h2>Tell us your piles. We'll price the job.</h2>
     <p class="lead">Send your sizes and quantities — we'll confirm dimensions, pricing, and lead time within one business day. Or just call <a href="tel:7328952200" style="color:var(--accent); font-weight:800;">(732) 895-2200</a>.</p>
-    <form onsubmit="alert('Mockup only — this form is not wired up yet.'); return false;">
-      <div class="field"><label>Name</label><input type="text" placeholder="Full name" required></div>
-      <div class="field"><label>Company</label><input type="text" placeholder="Company name"></div>
-      <div class="field"><label>Email</label><input type="email" placeholder="you@company.com" required></div>
-      <div class="field"><label>Phone</label><input type="tel" placeholder="(___) ___-____"></div>
+    <form id="quote-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="81009549-a482-4dd4-a478-71f2d99489dd">
+      <input type="hidden" name="subject" value="New Pile Gasket quote request">
+      <input type="hidden" name="from_name" value="Pile Gasket Website">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+      <div class="field"><label>Name</label><input type="text" name="name" placeholder="Full name" required></div>
+      <div class="field"><label>Company</label><input type="text" name="company" placeholder="Company name"></div>
+      <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@company.com" required></div>
+      <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(___) ___-____"></div>
       <div class="field"><label>Pile type</label>
-        <select><option>Timber — round</option><option>Steel pipe</option><option>Concrete — square</option><option>Other / mixed</option></select>
+        <select name="pile_type"><option>Timber — round</option><option>Steel pipe</option><option>Concrete — square</option><option>Other / mixed</option></select>
       </div>
-      <div class="field"><label>Quantity (approx.)</label><input type="number" placeholder="e.g. 40" min="1"></div>
-      <div class="field full"><label>Sizes &amp; project details</label><textarea rows="4" placeholder="e.g. 24 gaskets — 51&quot; circumference × 36&quot; height, timber piles, Brooklyn marine terminal, needed by September"></textarea></div>
+      <div class="field"><label>Quantity (approx.)</label><input type="number" name="quantity" placeholder="e.g. 40" min="1"></div>
+      <div class="field full"><label>Sizes &amp; project details</label><textarea rows="4" name="details" placeholder="e.g. 24 gaskets — 51&quot; circumference × 36&quot; height, timber piles, Brooklyn marine terminal, needed by September"></textarea></div>
       <button class="btn primary" type="submit">Send Quote Request</button>
       <div class="form-note">We respond within one business day. No spam, no mailing lists — just a price.</div>
     </form>
+    <script>
+    document.getElementById('quote-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = this, btn = form.querySelector('button[type=submit]'), note = form.querySelector('.form-note');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          if(d.success){
+            form.reset();
+            btn.textContent = 'Request Sent ✓';
+            note.textContent = 'Thanks — your quote request is in. We’ll get back to you within one business day.';
+          } else { throw new Error(d.message || 'Submission failed'); }
+        })
+        .catch(function(){
+          btn.disabled = false; btn.textContent = 'Send Quote Request';
+          note.textContent = 'Something went wrong sending the form — please call (732) 895-2200 or email FKSUPPLYCOLLC@GMAIL.COM.';
+        });
+    });
+    </script>
   </div>
 </section>
 
